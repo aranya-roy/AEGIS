@@ -1,0 +1,350 @@
+{
+ "model": "qwen2.5:3b",
+ "n_en": 8,
+ "n_hi": 20,
+ "rules": {
+  "heldout": {
+   "conversations": 21,
+   "scams": 15,
+   "benign": 6,
+   "detection_auroc": 0.789,
+   "step_recovery": {
+    "p": 1.0,
+    "r": 0.466,
+    "f1": 0.635,
+    "support": 58
+   },
+   "warned_by_money_turn": "8/15",
+   "benign_reaching_compliance_stage": "2/6",
+   "novel_family_detected": "2/5"
+  },
+  "heldout_rows": [
+   {
+    "id": "h01",
+    "score": 0.848,
+    "stage": "MONEY_MOVEMENT",
+    "code": "AUT>URG>ISO>RMT>TRF"
+   },
+   {
+    "id": "h02",
+    "score": 0.875,
+    "stage": "MONEY_MOVEMENT",
+    "code": "AUT>CHN>ISO>URG>TRF"
+   },
+   {
+    "id": "h03",
+    "score": 0.0,
+    "stage": null,
+    "code": ""
+   },
+   {
+    "id": "h04",
+    "score": 0.255,
+    "stage": "ISOLATION",
+    "code": "CHN"
+   },
+   {
+    "id": "h05",
+    "score": 0.487,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF"
+   },
+   {
+    "id": "h06",
+    "score": 0.334,
+    "stage": "COMPLIANCE",
+    "code": "CRD"
+   },
+   {
+    "id": "h07",
+    "score": 0.214,
+    "stage": "URGENCY",
+    "code": "URG"
+   },
+   {
+    "id": "h08",
+    "score": 0.503,
+    "stage": "ISOLATION",
+    "code": "LUR>ISO"
+   },
+   {
+    "id": "h09",
+    "score": 0.781,
+    "stage": "MONEY_MOVEMENT",
+    "code": "URG>TRF>RMT"
+   },
+   {
+    "id": "h10",
+    "score": 0.692,
+    "stage": "MONEY_MOVEMENT",
+    "code": "RMT>TRF"
+   },
+   {
+    "id": "h11",
+    "score": 0.692,
+    "stage": "MONEY_MOVEMENT",
+    "code": "RMT>TRF"
+   },
+   {
+    "id": "h12",
+    "score": 0.0,
+    "stage": null,
+    "code": ""
+   },
+   {
+    "id": "h13",
+    "score": 0.612,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF>URG"
+   },
+   {
+    "id": "h14",
+    "score": 0.507,
+    "stage": "ISOLATION",
+    "code": "ISO>URG"
+   },
+   {
+    "id": "h15",
+    "score": 0.0,
+    "stage": null,
+    "code": ""
+   },
+   {
+    "id": "h16",
+    "score": 0.0,
+    "stage": null,
+    "code": ""
+   },
+   {
+    "id": "h17",
+    "score": 0.487,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF"
+   },
+   {
+    "id": "h18",
+    "score": 0.0,
+    "stage": null,
+    "code": ""
+   },
+   {
+    "id": "h19",
+    "score": 0.0,
+    "stage": null,
+    "code": ""
+   },
+   {
+    "id": "h20",
+    "score": 0.0,
+    "stage": null,
+    "code": ""
+   },
+   {
+    "id": "h21",
+    "score": 0.487,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF"
+   }
+  ],
+  "en": {
+   "n": 8,
+   "scams": 4,
+   "benign": 4,
+   "auroc": 1.0,
+   "recall_at_5pct_fpr": 1.0,
+   "scams_with_any_signal": 1.0,
+   "benign_with_any_signal": 0.0,
+   "mean_score_by_type": {
+    "delivery-": 0.0,
+    "ssn+": 0.572
+   }
+  },
+  "hi": {
+   "n": 20,
+   "scams": 10,
+   "benign": 10,
+   "auroc": 0.99,
+   "recall_at_5pct_fpr": 1.0,
+   "scams_with_any_signal": 1.0,
+   "benign_with_any_signal": 0.1,
+   "mean_score_by_type": {
+    "hinglish+": 0.36,
+    "hinglish-": 0.019
+   }
+  },
+  "seconds": 0
+ },
+ "ensemble-local": {
+  "heldout": {
+   "conversations": 21,
+   "scams": 15,
+   "benign": 6,
+   "detection_auroc": 1.0,
+   "step_recovery": {
+    "p": 0.75,
+    "r": 0.621,
+    "f1": 0.679,
+    "support": 58
+   },
+   "warned_by_money_turn": "14/15",
+   "benign_reaching_compliance_stage": "5/6",
+   "novel_family_detected": "4/5"
+  },
+  "heldout_rows": [
+   {
+    "id": "h01",
+    "score": 0.89,
+    "stage": "MONEY_MOVEMENT",
+    "code": "AUT>URG>ISO>RMT>TRF"
+   },
+   {
+    "id": "h02",
+    "score": 0.91,
+    "stage": "MONEY_MOVEMENT",
+    "code": "AUT>CHN>URG>ISO>RMT>TRF"
+   },
+   {
+    "id": "h03",
+    "score": 0.72,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF>RMT"
+   },
+   {
+    "id": "h04",
+    "score": 0.779,
+    "stage": "MONEY_MOVEMENT",
+    "code": "CHN>RMT>TRF"
+   },
+   {
+    "id": "h05",
+    "score": 0.754,
+    "stage": "MONEY_MOVEMENT",
+    "code": "URG>ISO>TRF"
+   },
+   {
+    "id": "h06",
+    "score": 0.681,
+    "stage": "COMPLIANCE",
+    "code": "AUT>URG>CRD>ISO"
+   },
+   {
+    "id": "h07",
+    "score": 0.645,
+    "stage": "COMPLIANCE",
+    "code": "URG>RMT"
+   },
+   {
+    "id": "h08",
+    "score": 0.56,
+    "stage": "ISOLATION",
+    "code": "ISO>LUR>TRS"
+   },
+   {
+    "id": "h09",
+    "score": 0.849,
+    "stage": "MONEY_MOVEMENT",
+    "code": "URG>ISO>TRF>RMT"
+   },
+   {
+    "id": "h10",
+    "score": 0.806,
+    "stage": "MONEY_MOVEMENT",
+    "code": "ISO>RMT>TRF"
+   },
+   {
+    "id": "h11",
+    "score": 0.798,
+    "stage": "MONEY_MOVEMENT",
+    "code": "RMT>TRF>ISO>URG"
+   },
+   {
+    "id": "h12",
+    "score": 0.668,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF>ISO"
+   },
+   {
+    "id": "h13",
+    "score": 0.802,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF>URG>RMT"
+   },
+   {
+    "id": "h14",
+    "score": 0.576,
+    "stage": "ISOLATION",
+    "code": "ISO>URG"
+   },
+   {
+    "id": "h15",
+    "score": 0.705,
+    "stage": "MONEY_MOVEMENT",
+    "code": "ISO>TRF"
+   },
+   {
+    "id": "h16",
+    "score": 0.266,
+    "stage": "ISOLATION",
+    "code": "AUT>ISO"
+   },
+   {
+    "id": "h17",
+    "score": 0.487,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF"
+   },
+   {
+    "id": "h18",
+    "score": 0.525,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF"
+   },
+   {
+    "id": "h19",
+    "score": 0.525,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF"
+   },
+   {
+    "id": "h20",
+    "score": 0.443,
+    "stage": "COMPLIANCE",
+    "code": "RMT"
+   },
+   {
+    "id": "h21",
+    "score": 0.487,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF"
+   }
+  ],
+  "en": {
+   "n": 8,
+   "scams": 4,
+   "benign": 4,
+   "auroc": 1.0,
+   "recall_at_5pct_fpr": 1.0,
+   "scams_with_any_signal": 1.0,
+   "benign_with_any_signal": 0.75,
+   "mean_score_by_type": {
+    "delivery-": 0.17,
+    "ssn+": 0.543
+   }
+  },
+  "hi": {
+   "n": 20,
+   "scams": 10,
+   "benign": 10,
+   "auroc": 0.92,
+   "recall_at_5pct_fpr": 0.8,
+   "scams_with_any_signal": 1.0,
+   "benign_with_any_signal": 0.7,
+   "mean_score_by_type": {
+    "hinglish+": 0.4,
+    "hinglish-": 0.17
+   }
+  },
+  "seconds": 2016,
+  "llm_timeouts": 0
+ }
+}

@@ -1,0 +1,427 @@
+{
+ "extractor": "rules",
+ "scam_dialogue_en": {
+  "n": 320,
+  "scams": 160,
+  "benign": 160,
+  "auroc": 0.939,
+  "recall_at_5pct_fpr": 0.794,
+  "scams_with_any_signal": 0.919,
+  "benign_with_any_signal": 0.125,
+  "mean_score_by_type": {
+   "delivery-": 0.003,
+   "insurance-": 0.017,
+   "refund+": 0.39,
+   "reward+": 0.179,
+   "ssn+": 0.569,
+   "support+": 0.51,
+   "telemarketing-": 0.063,
+   "wrong-": 0.005
+  }
+ },
+ "scam_dialogue_en_misses": [
+  {
+   "id": "sd49",
+   "type": "refund",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd58",
+   "type": "refund",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd60",
+   "type": "refund",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd123",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd124",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd125",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd134",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd136",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd137",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd145",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd146",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd157",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "sd158",
+   "type": "reward",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  }
+ ],
+ "scam_dialogue_en_false_hits": [
+  {
+   "id": "sd243",
+   "type": "telemarketing",
+   "is_scam": false,
+   "score": 0.2856,
+   "stage": "URGENCY",
+   "code": "URG>TRS"
+  },
+  {
+   "id": "sd251",
+   "type": "telemarketing",
+   "is_scam": false,
+   "score": 0.2137,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd263",
+   "type": "telemarketing",
+   "is_scam": false,
+   "score": 0.2137,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd277",
+   "type": "telemarketing",
+   "is_scam": false,
+   "score": 0.2137,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd204",
+   "type": "insurance",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd222",
+   "type": "insurance",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd232",
+   "type": "insurance",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd244",
+   "type": "telemarketing",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd250",
+   "type": "telemarketing",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "sd252",
+   "type": "telemarketing",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  }
+ ],
+ "hinglish_calls": {
+  "n": 376,
+  "scams": 323,
+  "benign": 53,
+  "auroc": 0.941,
+  "recall_at_5pct_fpr": 0.687,
+  "scams_with_any_signal": 0.929,
+  "benign_with_any_signal": 0.094,
+  "mean_score_by_type": {
+   "hinglish+": 0.265,
+   "hinglish-": 0.018
+  }
+ },
+ "hinglish_calls_misses": [
+  {
+   "id": "hg35",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg36",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg195",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg236",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg276",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg299",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg357",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg358",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg388",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg389",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg411",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg429",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg452",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg457",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg499",
+   "type": "hinglish",
+   "is_scam": true,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  }
+ ],
+ "hinglish_calls_false_hits": [
+  {
+   "id": "hg54",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "hg254",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "hg407",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "hg448",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "hg699",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.195,
+   "stage": "URGENCY",
+   "code": "URG"
+  },
+  {
+   "id": "hg53",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg59",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg193",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg211",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  },
+  {
+   "id": "hg223",
+   "type": "hinglish",
+   "is_scam": false,
+   "score": 0.0,
+   "stage": null,
+   "code": ""
+  }
+ ]
+}

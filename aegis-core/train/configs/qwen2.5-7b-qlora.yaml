@@ -1,0 +1,25 @@
+# Async / deep-analysis model. One 24 GB GPU (L4, A10G, RTX 4090) is enough
+# for QLoRA at this size; an A100/H100 just makes it faster.
+base_model: Qwen/Qwen2.5-7B-Instruct
+output_dir: runs/qwen2.5-7b-aegis
+attn_implementation: sdpa
+
+data:
+  train: data/gen/sft_train.jsonl
+  val: data/gen/sft_val.jsonl
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: all-linear
+
+training:
+  epochs: 2
+  batch_size: 4
+  grad_accum: 4        # effective batch 16
+  lr: 2.0e-4
+  max_len: 2048        # system prompt is ~900 tokens; context + target fit easily
+  eval_steps: 100
+  seed: 42
+  report_to: none

@@ -1,0 +1,25 @@
+# Real-time candidate: small enough for ~100-250 ms/turn on one L4 with vLLM
+# (measure with `python -m aegis_core.evaluation.run --extractor local`).
+base_model: Qwen/Qwen2.5-3B-Instruct
+output_dir: runs/qwen2.5-3b-aegis
+attn_implementation: sdpa
+
+data:
+  train: data/gen/sft_train.jsonl
+  val: data/gen/sft_val.jsonl
+
+lora:
+  r: 32
+  alpha: 64
+  dropout: 0.05
+  target_modules: all-linear
+
+training:
+  epochs: 3
+  batch_size: 8
+  grad_accum: 2
+  lr: 2.0e-4
+  max_len: 2048
+  eval_steps: 100
+  seed: 42
+  report_to: none

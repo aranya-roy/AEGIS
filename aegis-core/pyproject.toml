@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegis-core"
+version = "0.1.0"
+description = "AEGIS AI/ML intelligence layer: privacy gate, semantic scam-event extraction, manipulation state machine, Scam DNA, ShadowPath"
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.6", "httpx>=0.27"]
+
+[project.optional-dependencies]
+claude = ["anthropic>=1.0"]
+asr = ["faster-whisper>=1.0"]
+train = ["torch", "transformers>=4.45", "datasets", "peft>=0.12", "trl>=0.19", "bitsandbytes", "pyyaml", "accelerate"]
+dev = ["pytest"]
+
+[project.scripts]
+aegis-core = "aegis_core.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["aegis_core*"]

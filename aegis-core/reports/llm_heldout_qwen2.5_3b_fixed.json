@@ -1,0 +1,210 @@
+{
+ "gate_on": {
+  "summary": {
+   "conversations": 21,
+   "scams": 15,
+   "benign": 6,
+   "detection_auroc": 0.989,
+   "step_recovery": {
+    "p": 0.921,
+    "r": 0.603,
+    "f1": 0.729,
+    "support": 58
+   },
+   "warned_by_money_turn": "10/15",
+   "benign_reaching_compliance_stage": "0/6",
+   "novel_family_detected": "3/5"
+  },
+  "rows": [
+   {
+    "id": "h01",
+    "is_scam": true,
+    "score": 0.878,
+    "stage": "MONEY_MOVEMENT",
+    "code": "AUT>URG>ISO>RMT>TRF",
+    "warned_at": 4,
+    "money_turn": 4
+   },
+   {
+    "id": "h02",
+    "is_scam": true,
+    "score": 0.932,
+    "stage": "MONEY_MOVEMENT",
+    "code": "AUT>URG>CHN>ISO>TRF",
+    "warned_at": 2,
+    "money_turn": 5
+   },
+   {
+    "id": "h03",
+    "is_scam": true,
+    "score": 0.225,
+    "stage": null,
+    "code": "TRF",
+    "warned_at": null,
+    "money_turn": 3
+   },
+   {
+    "id": "h04",
+    "is_scam": true,
+    "score": 0.644,
+    "stage": "MONEY_MOVEMENT",
+    "code": "CHN>TRF",
+    "warned_at": 3,
+    "money_turn": 3
+   },
+   {
+    "id": "h05",
+    "is_scam": true,
+    "score": 0.636,
+    "stage": "MONEY_MOVEMENT",
+    "code": "URG>TRF",
+    "warned_at": 2,
+    "money_turn": 2
+   },
+   {
+    "id": "h06",
+    "is_scam": true,
+    "score": 0.672,
+    "stage": "COMPLIANCE",
+    "code": "AUT>URG>CRD>ISO",
+    "warned_at": 1,
+    "money_turn": 1
+   },
+   {
+    "id": "h07",
+    "is_scam": true,
+    "score": 0.645,
+    "stage": "COMPLIANCE",
+    "code": "URG>RMT",
+    "warned_at": 1,
+    "money_turn": 1
+   },
+   {
+    "id": "h08",
+    "is_scam": true,
+    "score": 0.511,
+    "stage": "ISOLATION",
+    "code": "LUR>ISO",
+    "warned_at": 2,
+    "money_turn": 1
+   },
+   {
+    "id": "h09",
+    "is_scam": true,
+    "score": 0.796,
+    "stage": "MONEY_MOVEMENT",
+    "code": "URG>TRF>RMT",
+    "warned_at": 2,
+    "money_turn": 2
+   },
+   {
+    "id": "h10",
+    "is_scam": true,
+    "score": 0.414,
+    "stage": null,
+    "code": "RMT>TRF",
+    "warned_at": 1,
+    "money_turn": 2
+   },
+   {
+    "id": "h11",
+    "is_scam": true,
+    "score": 0.78,
+    "stage": "MONEY_MOVEMENT",
+    "code": "RMT>TRF>URG",
+    "warned_at": 0,
+    "money_turn": 1
+   },
+   {
+    "id": "h12",
+    "is_scam": true,
+    "score": 0.525,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF",
+    "warned_at": 2,
+    "money_turn": 1
+   },
+   {
+    "id": "h13",
+    "is_scam": true,
+    "score": 0.787,
+    "stage": "MONEY_MOVEMENT",
+    "code": "TRF>URG>RMT",
+    "warned_at": 0,
+    "money_turn": 1
+   },
+   {
+    "id": "h14",
+    "is_scam": true,
+    "score": 0.576,
+    "stage": "ISOLATION",
+    "code": "ISO>URG",
+    "warned_at": null,
+    "money_turn": 1
+   },
+   {
+    "id": "h15",
+    "is_scam": true,
+    "score": 0.225,
+    "stage": null,
+    "code": "TRF",
+    "warned_at": null,
+    "money_turn": 1
+   },
+   {
+    "id": "h16",
+    "is_scam": false,
+    "score": 0.076,
+    "stage": "AUTHORITY",
+    "code": "AUT",
+    "warned_at": null,
+    "money_turn": null
+   },
+   {
+    "id": "h17",
+    "is_scam": false,
+    "score": 0.188,
+    "stage": null,
+    "code": "TRF",
+    "warned_at": null,
+    "money_turn": null
+   },
+   {
+    "id": "h18",
+    "is_scam": false,
+    "score": 0.225,
+    "stage": null,
+    "code": "TRF",
+    "warned_at": null,
+    "money_turn": null
+   },
+   {
+    "id": "h19",
+    "is_scam": false,
+    "score": 0.0,
+    "stage": null,
+    "code": "",
+    "warned_at": null,
+    "money_turn": null
+   },
+   {
+    "id": "h20",
+    "is_scam": false,
+    "score": 0.203,
+    "stage": null,
+    "code": "RMT",
+    "warned_at": 2,
+    "money_turn": null
+   },
+   {
+    "id": "h21",
+    "is_scam": false,
+    "score": 0.188,
+    "stage": null,
+    "code": "TRF",
+    "warned_at": null,
+    "money_turn": null
+   }
+  ]
+ }
+}

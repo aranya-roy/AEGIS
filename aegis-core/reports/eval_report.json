@@ -1,0 +1,523 @@
+{
+  "extractor": "rules",
+  "synthetic_test_conversations": 300,
+  "extraction": {
+    "turns": 1949,
+    "micro": {
+      "p": 0.958,
+      "r": 0.826,
+      "f1": 0.887,
+      "support": 1039
+    },
+    "macro_f1": 0.901,
+    "per_signal": {
+      "AUTHORITY_CLAIM": {
+        "p": 1.0,
+        "r": 0.462,
+        "f1": 0.632,
+        "support": 173
+      },
+      "CHANNEL_SHIFT": {
+        "p": 1.0,
+        "r": 0.991,
+        "f1": 0.995,
+        "support": 109
+      },
+      "CREDENTIAL_REQUEST": {
+        "p": 0.679,
+        "r": 0.644,
+        "f1": 0.661,
+        "support": 59
+      },
+      "ISOLATION": {
+        "p": 1.0,
+        "r": 0.925,
+        "f1": 0.961,
+        "support": 40
+      },
+      "PAYMENT_REQUEST": {
+        "p": 1.0,
+        "r": 0.865,
+        "f1": 0.928,
+        "support": 156
+      },
+      "PERSONAL_INFO_REQUEST": {
+        "p": 1.0,
+        "r": 0.677,
+        "f1": 0.808,
+        "support": 31
+      },
+      "REMOTE_ACCESS": {
+        "p": 1.0,
+        "r": 0.969,
+        "f1": 0.984,
+        "support": 64
+      },
+      "REWARD_LURE": {
+        "p": 0.849,
+        "r": 0.988,
+        "f1": 0.913,
+        "support": 80
+      },
+      "SAFETY_ADVICE": {
+        "p": 1.0,
+        "r": 0.95,
+        "f1": 0.974,
+        "support": 20
+      },
+      "SECRECY": {
+        "p": 1.0,
+        "r": 0.961,
+        "f1": 0.98,
+        "support": 51
+      },
+      "THREAT": {
+        "p": 0.936,
+        "r": 0.88,
+        "f1": 0.907,
+        "support": 100
+      },
+      "TRUST_BUILDING": {
+        "p": 1.0,
+        "r": 0.967,
+        "f1": 0.983,
+        "support": 60
+      },
+      "URGENCY": {
+        "p": 1.0,
+        "r": 0.869,
+        "f1": 0.93,
+        "support": 84
+      },
+      "VERIFICATION_DISCOURAGEMENT": {
+        "p": 1.0,
+        "r": 0.917,
+        "f1": 0.957,
+        "support": 12
+      }
+    },
+    "per_language": {
+      "en": {
+        "p": 0.952,
+        "r": 0.872,
+        "f1": 0.91,
+        "support": 546
+      },
+      "hi": {
+        "p": 0.936,
+        "r": 0.75,
+        "f1": 0.833,
+        "support": 272
+      },
+      "hinglish": {
+        "p": 1.0,
+        "r": 0.805,
+        "f1": 0.892,
+        "support": 221
+      }
+    },
+    "action_acc": 0.964,
+    "stage_acc": 0.909,
+    "grounding_rate": 1.0
+  },
+  "heldout": {
+    "conversations": 21,
+    "scams": 15,
+    "benign": 6,
+    "detection_auroc": 0.833,
+    "step_recovery": {
+      "p": 1.0,
+      "r": 0.466,
+      "f1": 0.635,
+      "support": 58
+    },
+    "warned_by_money_turn": "6/15",
+    "benign_reaching_compliance_stage": "0/6",
+    "novel_family_detected": "1/5",
+    "rows": [
+      {
+        "id": "h01",
+        "family": "bank_kyc_remote",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.848,
+        "stage": "MONEY_MOVEMENT",
+        "dna": "Remote-access financial fraud",
+        "dna_pct": 76,
+        "code": "AUT>URG>ISO>RMT>TRF",
+        "step_tp": 5,
+        "step_fp": 0,
+        "step_fn": 1,
+        "warned_at": 4,
+        "money_turn": 4
+      },
+      {
+        "id": "h02",
+        "family": "digital_arrest",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.875,
+        "stage": "MONEY_MOVEMENT",
+        "dna": "Digital-arrest extortion",
+        "dna_pct": 69,
+        "code": "AUT>CHN>ISO>URG>TRF",
+        "step_tp": 5,
+        "step_fp": 0,
+        "step_fn": 0,
+        "warned_at": 5,
+        "money_turn": 5
+      },
+      {
+        "id": "h03",
+        "family": "upi_refund",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.0,
+        "stage": null,
+        "dna": null,
+        "dna_pct": 0,
+        "code": "",
+        "step_tp": 0,
+        "step_fp": 0,
+        "step_fn": 3,
+        "warned_at": null,
+        "money_turn": 3
+      },
+      {
+        "id": "h04",
+        "family": "task_job",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.255,
+        "stage": "ISOLATION",
+        "dna": "Investment / trading-group scam",
+        "dna_pct": 50,
+        "code": "CHN",
+        "step_tp": 1,
+        "step_fp": 0,
+        "step_fn": 2,
+        "warned_at": null,
+        "money_turn": 3
+      },
+      {
+        "id": "h05",
+        "family": "family_emergency",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.028,
+        "stage": null,
+        "dna": "Lottery advance-fee fraud (variant 2)",
+        "dna_pct": 50,
+        "code": "TRF",
+        "step_tp": 1,
+        "step_fp": 0,
+        "step_fn": 3,
+        "warned_at": null,
+        "money_turn": 2
+      },
+      {
+        "id": "h06",
+        "family": "telecom_sim",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.014,
+        "stage": null,
+        "dna": "SIM / TRAI verification scam",
+        "dna_pct": 15,
+        "code": "CRD",
+        "step_tp": 1,
+        "step_fp": 0,
+        "step_fn": 2,
+        "warned_at": null,
+        "money_turn": 1
+      },
+      {
+        "id": "h07",
+        "family": "tech_support",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.214,
+        "stage": "URGENCY",
+        "dna": "Digital-arrest extortion",
+        "dna_pct": 50,
+        "code": "URG",
+        "step_tp": 1,
+        "step_fp": 0,
+        "step_fn": 3,
+        "warned_at": null,
+        "money_turn": 1
+      },
+      {
+        "id": "h08",
+        "family": "lottery_fee",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.503,
+        "stage": "ISOLATION",
+        "dna": "Lottery advance-fee fraud (variant 3)",
+        "dna_pct": 64,
+        "code": "LUR>ISO",
+        "step_tp": 2,
+        "step_fp": 0,
+        "step_fn": 1,
+        "warned_at": 2,
+        "money_turn": 1
+      },
+      {
+        "id": "h09",
+        "family": "utility_disconnect",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.781,
+        "stage": "MONEY_MOVEMENT",
+        "dna": "Utility disconnection scam",
+        "dna_pct": 55,
+        "code": "URG>TRF>RMT",
+        "step_tp": 3,
+        "step_fp": 0,
+        "step_fn": 2,
+        "warned_at": 2,
+        "money_turn": 2
+      },
+      {
+        "id": "h10",
+        "family": "investment_group",
+        "is_scam": true,
+        "novel": false,
+        "score": 0.135,
+        "stage": null,
+        "dna": "Tech-support remote takeover (variant 2)",
+        "dna_pct": 39,
+        "code": "RMT>TRF",
+        "step_tp": 2,
+        "step_fp": 0,
+        "step_fn": 1,
+        "warned_at": 1,
+        "money_turn": 2
+      },
+      {
+        "id": "h11",
+        "family": "novel_loan_app",
+        "is_scam": true,
+        "novel": true,
+        "score": 0.135,
+        "stage": null,
+        "dna": "Tech-support remote takeover (variant 2)",
+        "dna_pct": 39,
+        "code": "RMT>TRF",
+        "step_tp": 2,
+        "step_fp": 0,
+        "step_fn": 2,
+        "warned_at": 0,
+        "money_turn": 1
+      },
+      {
+        "id": "h12",
+        "family": "novel_olx_army",
+        "is_scam": true,
+        "novel": true,
+        "score": 0.0,
+        "stage": null,
+        "dna": null,
+        "dna_pct": 0,
+        "code": "",
+        "step_tp": 0,
+        "step_fp": 0,
+        "step_fn": 2,
+        "warned_at": null,
+        "money_turn": 1
+      },
+      {
+        "id": "h13",
+        "family": "novel_challan_link",
+        "is_scam": true,
+        "novel": true,
+        "score": 0.612,
+        "stage": "MONEY_MOVEMENT",
+        "dna": "Family-emergency impersonation",
+        "dna_pct": 39,
+        "code": "TRF>URG",
+        "step_tp": 2,
+        "step_fp": 0,
+        "step_fn": 2,
+        "warned_at": 0,
+        "money_turn": 1
+      },
+      {
+        "id": "h14",
+        "family": "novel_romance_gift",
+        "is_scam": true,
+        "novel": true,
+        "score": 0.507,
+        "stage": "ISOLATION",
+        "dna": "Digital-arrest extortion",
+        "dna_pct": 32,
+        "code": "ISO>URG",
+        "step_tp": 2,
+        "step_fp": 0,
+        "step_fn": 3,
+        "warned_at": null,
+        "money_turn": 1
+      },
+      {
+        "id": "h15",
+        "family": "novel_insurance_bonus",
+        "is_scam": true,
+        "novel": true,
+        "score": 0.0,
+        "stage": null,
+        "dna": null,
+        "dna_pct": 0,
+        "code": "",
+        "step_tp": 0,
+        "step_fp": 0,
+        "step_fn": 4,
+        "warned_at": null,
+        "money_turn": 1
+      },
+      {
+        "id": "h16",
+        "family": "benign_bank_alert",
+        "is_scam": false,
+        "novel": false,
+        "score": 0.0,
+        "stage": null,
+        "dna": null,
+        "dna_pct": 0,
+        "code": "",
+        "step_tp": 0,
+        "step_fp": 0,
+        "step_fn": 0,
+        "warned_at": null,
+        "money_turn": null
+      },
+      {
+        "id": "h17",
+        "family": "benign_family_money",
+        "is_scam": false,
+        "novel": false,
+        "score": 0.028,
+        "stage": null,
+        "dna": "Lottery advance-fee fraud (variant 2)",
+        "dna_pct": 50,
+        "code": "TRF",
+        "step_tp": 0,
+        "step_fp": 1,
+        "step_fn": 0,
+        "warned_at": null,
+        "money_turn": null
+      },
+      {
+        "id": "h18",
+        "family": "benign_doctor",
+        "is_scam": false,
+        "novel": false,
+        "score": 0.0,
+        "stage": null,
+        "dna": null,
+        "dna_pct": 0,
+        "code": "",
+        "step_tp": 0,
+        "step_fp": 0,
+        "step_fn": 0,
+        "warned_at": null,
+        "money_turn": null
+      },
+      {
+        "id": "h19",
+        "family": "benign_support",
+        "is_scam": false,
+        "novel": false,
+        "score": 0.0,
+        "stage": null,
+        "dna": null,
+        "dna_pct": 0,
+        "code": "",
+        "step_tp": 0,
+        "step_fp": 0,
+        "step_fn": 0,
+        "warned_at": null,
+        "money_turn": null
+      },
+      {
+        "id": "h20",
+        "family": "benign_delivery_otp",
+        "is_scam": false,
+        "novel": false,
+        "score": 0.0,
+        "stage": null,
+        "dna": null,
+        "dna_pct": 0,
+        "code": "",
+        "step_tp": 0,
+        "step_fp": 0,
+        "step_fn": 0,
+        "warned_at": null,
+        "money_turn": null
+      },
+      {
+        "id": "h21",
+        "family": "benign_bill",
+        "is_scam": false,
+        "novel": false,
+        "score": 0.028,
+        "stage": null,
+        "dna": "Lottery advance-fee fraud (variant 2)",
+        "dna_pct": 50,
+        "code": "TRF",
+        "step_tp": 0,
+        "step_fp": 1,
+        "step_fn": 0,
+        "warned_at": null,
+        "money_turn": null
+      }
+    ]
+  },
+  "dna": {
+    "novelty_auroc_leave_family_out": 0.647,
+    "mean_match_unseen_family": 0.708,
+    "mean_match_seen_family": 0.758,
+    "unseen_family_mean_match": {
+      "bank_kyc_remote": 0.714,
+      "digital_arrest": 0.725,
+      "upi_refund": 0.543,
+      "utility_disconnect": 0.704,
+      "task_job": 0.911,
+      "investment_group": 0.85,
+      "tech_support": 0.794,
+      "family_emergency": 0.713,
+      "telecom_sim": 0.579,
+      "lottery_fee": 0.547
+    },
+    "shadowpath_top1_unseen_family": 0.489,
+    "shadowpath_top3_unseen_family": 0.617,
+    "shadowpath_top1_seen_family": 0.629
+  },
+  "latency": {
+    "turns": 637,
+    "extractor_p50_ms": 0.19,
+    "extractor_p95_ms": 0.31,
+    "pipeline_p50_ms": 0.31,
+    "pipeline_p95_ms": 0.47
+  },
+  "privacy_utility": {
+    "none": {
+      "pii_leak_rate": 0.9467,
+      "signal_micro_f1": 0.884,
+      "heldout_detection_auroc": 0.833,
+      "heldout_step_f1": 0.635
+    },
+    "typed": {
+      "pii_leak_rate": 0.0,
+      "signal_micro_f1": 0.887,
+      "heldout_detection_auroc": 0.833,
+      "heldout_step_f1": 0.635
+    },
+    "masked": {
+      "pii_leak_rate": 0.0,
+      "signal_micro_f1": 0.874,
+      "heldout_detection_auroc": 0.833,
+      "heldout_step_f1": 0.635
+    }
+  }
+}
